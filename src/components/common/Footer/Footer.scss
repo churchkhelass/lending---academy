@@ -1,6 +1,6 @@
 /* Footer.css */
 .footer {
-  background-color: #1a1a2e;
+  background-color: #1A1A1A;
   color: #fff;
   padding: 3rem 0 1.5rem;
   margin-top: auto;
@@ -32,6 +32,7 @@
   font-size: 1.1rem;
   margin-bottom: 1rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .footer__description {
@@ -43,6 +44,15 @@
 .footer__contacts {
   list-style: none;
 }
+.links__label {
+  display: none;
+}
+@media (min-width: 769px) {
+  .links__label
+  {
+    display: block;
+  }
+}
 
 .footer__links li,
 .footer__contacts li {
@@ -50,7 +60,7 @@
 }
 
 .footer__links a {
-  color: #aaa;
+  color: #FAFAFA80;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -60,15 +70,45 @@
 }
 
 .footer__contacts li {
-  color: #aaa;
+  color: #FAFAFA80;
+  font-size: small;
+}
+.footer__contacts span {
+  text-transform: uppercase;
+  font-size: large;
+}
+
+.footer__button{
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 15px 30px;
+}
+
+.positive {
+  background-color: #FAFAFA;
+  color: #FAFAFA1A;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.negative {
+  background-color: #FAFAFA1A;
+  color: #FAFAFA;
+  // border: 2px solid #667eea;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer__bottom {
+  display: flex;
   text-align: center;
   padding-top: 1.5rem;
   border-top: 1px solid #333;
   color: #aaa;
   font-size: 0.875rem;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 @media (max-width: 768px) {

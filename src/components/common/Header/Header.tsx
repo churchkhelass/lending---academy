@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import useScroll from '../../../hooks/useScroll';
 import Container from '../Container/Container';
 import './Header.scss';
+import logoHeader from '../../../assets/logoHeader.png'
+import { navLinks } from '../../../utils/pageList';
 
-interface NavLink {
+export interface NavLink {
   href: string;
   label: string;
 }
-
 const Header = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isScrolled: boolean = useScroll(50);
@@ -16,18 +17,13 @@ const Header = (): React.ReactElement => {
   const toggleMenu = (): void => setIsOpen(!isOpen);
   const closeMenu = (): void => setIsOpen(false);
 
-  const navLinks: NavLink[] = [
-    { href: '#home', label: 'Главная' },
-    { href: '#features', label: 'Возможности' },
-    { href: '#pricing', label: 'Цены' },
-    { href: '#contact', label: 'Контакты' },
-  ];
 
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <Container className="header__container">
         <a href="#home" className="header__logo">
-          <span className="header__logo-text">Logo</span>
+          {/* <span className="header__logo-text">Logo</span> */}
+          <img src={logoHeader} alt="Logo" className="header__logo-text" />
         </a>
 
         <nav className="header__nav">
@@ -49,7 +45,7 @@ const Header = (): React.ReactElement => {
           aria-expanded={isOpen}
         >
           <span className="header__burger-line"></span>
-          <span className="header__burger-line"></span>
+          {/* <span className="header__burger-line"></span> */}
           <span className="header__burger-line"></span>
         </button>
 
