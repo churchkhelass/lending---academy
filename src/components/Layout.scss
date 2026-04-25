@@ -1,0 +1,15 @@
+// components/Layout.scss
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  &__main {
+    flex: 1 0 auto;
+    padding-top: 80px; // Отступ под фиксированный хедер
+    
+    @media (max-width: 768px) {
+      padding-top: 70px;
+    }
+  }
+}
