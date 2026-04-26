@@ -1,0 +1,44 @@
+// WaveGradient.scss
+.wave-gradient {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  height: 20vh;
+
+  &__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    will-change: transform;
+  }
+}
+
+// Плавное появление
+.wave-gradient--fade-in {
+  animation: fadeIn 0.5s ease-out;
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wave-gradient {
+    height: 42vh;
+  }
+}
+
+// Адаптация для пользователей с чувствительностью к движению
+@media (prefers-reduced-motion: reduce) {
+  .wave-gradient__canvas {
+    animation: none !important;
+  }
+}

@@ -6,7 +6,7 @@ import Hero from './sections/Hero/Hero';
 // import Features from './sections/Features';
 // import Pricing from './sections/Pricing';
 // import Contact from './sections/Contact';
-import './styles/global.scss';
+import './styles/global.css';
 
 function App(): React.ReactElement {
   return (

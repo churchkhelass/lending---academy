@@ -55,6 +55,64 @@ button {
   cursor: pointer;
 }
 
+:root {
+  // Colors
+  --color-primary: #667eea;
+  --color-primary-dark: #5a67d8;
+  --color-secondary: #764ba2;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-background: #fff;
+  --color-background-alt: #f7fafc;
+  
+  // Typography
+  --font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  // Spacing
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  // Breakpoints
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  
+  // Container
+  --container-max-width: 1200px;
+  --container-padding: 20px;
+  
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 16px;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

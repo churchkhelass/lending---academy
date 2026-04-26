@@ -4,7 +4,6 @@
 }
  
  export const navLinks: NavLink[] = [
-    { href: '#home', label: 'Главная' },
     { href: '#aboutus', label: 'О нас' },
     { href: '#services', label: 'Услуги' },
     { href: '#cases', label: 'Кейсы' },
