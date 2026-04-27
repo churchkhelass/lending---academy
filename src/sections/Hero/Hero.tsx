@@ -19,16 +19,16 @@ const Hero = ({
   который приносит заявки и клиентов. Мы отвечаем за процесс от
   первой встречи до запуска и первых результатов.`,
   // ctaText = 'Начать',
-  onCtaClick 
+  // onCtaClick 
 }: HeroProps): React.ReactElement => {
-  const handleClick = (): void => {
-    if (onCtaClick) {
-      onCtaClick();
-    } else {
-      const featuresSection = document.getElementById('features');
-      featuresSection?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const handleClick = (): void => {
+  //   if (onCtaClick) {
+  //     onCtaClick();
+  //   } else {
+  //     const featuresSection = document.getElementById('features');
+  //     featuresSection?.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <section id="home" className="hero">

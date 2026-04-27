@@ -189,7 +189,7 @@ const MathCurvesWithPhotos: React.FC = () => {
     drawCurve(curve2, 'grey');
     
     // Функция рисования фото
-    const drawPhoto = (image: HTMLImageElement, x: number, y: number, borderColor: string, label?: string): void => {
+    const drawPhoto = (image: HTMLImageElement, x: number, y: number): void => {
       ctx.save();
             
       // Рисуем изображение
@@ -210,7 +210,7 @@ const MathCurvesWithPhotos: React.FC = () => {
       if (y >= yMin && y <= yMax) {
         const { x: px, y: py } = toPixel(x, y);
         const image = getImageForPoint(i);
-        drawPhoto(image, px, py, '#ff6b6b', `P${i + 1}`);
+        drawPhoto(image, px, py);
       }
     }
     
@@ -220,7 +220,7 @@ const MathCurvesWithPhotos: React.FC = () => {
       if (y >= yMin && y <= yMax) {
         const { x: px, y: py } = toPixel(x, y);
         const image = getImageForPoint(i + POINTS_ON_CURVE1);
-        drawPhoto(image, px, py, '', `P${i + 1 + POINTS_ON_CURVE1}`);
+        drawPhoto(image, px, py);
       }
     }
     

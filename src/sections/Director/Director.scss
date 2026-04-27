@@ -1,0 +1,68 @@
+// Import font at the top of your global styles or in Director.scss
+// If using Google Fonts or similar, you would add @import or @font-face
+// Assuming CoFo Peshka VF Trial is locally available:
+@font-face {
+  font-family: 'Unbounded';
+  src: url('../../../fonts/Unbounded-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+.abc{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.container__dir {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-end; // Adjust alignment
+   font-family: 'Unbounded-Medium'; // Added font style
+   text-transform: uppercase;
+   margin-top: 2rem;
+
+   .content-text {
+      font-size: 2.5rem;
+      line-height: normal;
+      color: #1A1A1A; // 100% opacity black
+      justify-content: flex-start;
+      display: flex;
+
+      span {
+         color:#AFE118;
+      }
+   }
+
+   @media (max-width: 1024px) {
+    .content-text{font-size: 1.25rem;}
+  }
+
+   .image-wrapper {
+      position: relative;
+      display: inline-block;
+
+      img {
+         display: block; // Removes extra space below image
+      }
+
+      // The bar that touches the bottom of the photo
+   }
+}
+.photo-bar {
+   width: 100%;
+   height: 2px; // Adjust thickness as needed
+   background-color: #1A1A1A80; // Green color matching previous request
+}
+
+// Caption below the bar
+.caption {
+   margin-top: 8px; // Space between bar and caption
+   font-size: 0.875rem;
+   color: #1A1A1A80; // 50% opacity black
+   font-family: inherit;
+
+   &::before {
+      content: '*';
+   }
+}

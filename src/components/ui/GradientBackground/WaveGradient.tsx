@@ -156,11 +156,10 @@ export const WaveGradient: React.FC<WaveGradientProps> = ({
       ctx: CanvasRenderingContext2D,
       x: number,
       y: number,
-      width: number,
       height: number,
       waveConfig: SineWaveConfig
     ): CanvasGradient => {
-      const { color, gradientColor, fillOpacity = 0.3 } = waveConfig;
+      const { color, gradientColor } = waveConfig;
 
       // Создаем градиент от верхней точки кривой до низа
       const gradient = ctx.createLinearGradient(x, y, x, height - 50);
@@ -227,14 +226,14 @@ export const WaveGradient: React.FC<WaveGradientProps> = ({
 
             // Создаем вертикальный градиент для этого сегмента
             const avgY = (startPoint.y + endPoint.y) / 2;
-            const gradient = createVerticalGradient(ctx, startPoint.x, avgY, width, height, waveConfig);
+            const gradient = createVerticalGradient(ctx, startPoint.x, avgY, height, waveConfig);
 
             ctx.fillStyle = gradient;
             ctx.fill();
           }
           ctx.strokeStyle = waveConfig.color;
           ctx.lineWidth = 2;
-          ctx.globalAlpha = waveConfig.fillOpacity ?? 0.8;
+          // ctx.globalAlpha = waveConfig.fillOpacity ?? 0.8;
           ctx.stroke();
         } else {
           // Только линия без заливки

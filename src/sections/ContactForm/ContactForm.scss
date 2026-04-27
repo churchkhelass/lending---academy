@@ -1,0 +1,236 @@
+.contact-form-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-form {
+  width: 100%;
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__field {
+    transition: all 0.3s ease;
+
+    // Стили для поля при фокусе и ховере
+    &:focus-within {
+      transform: translateX(8px);
+    }
+
+    // Изменение цвета строки при выборе
+    &--active {
+      .contact-form__input {
+        background-color: #333333;
+        color: #ffffff;
+        
+        &::placeholder {
+          color: #aaaaaa;
+        }
+      }
+      
+      .contact-form__label {
+        color: #AFE118;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+    color: #ffffff;
+  }
+
+  &__input {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &:focus {
+      border-color: #AFE118;
+      background-color: #ffffff;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(175, 225, 24, 0.2);
+    }
+
+    // Активное состояние - цвет меняется на серый, текст на белый
+    &:not(:placeholder-shown) {
+      background-color: #333333;
+      color: #ffffff;
+      
+      &::placeholder {
+        color: #aaaaaa;
+      }
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    
+    &-input {
+      background-color: #ffffff;
+      color: #000000;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      resize: vertical;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &:focus {
+        border-color: #AFE118;
+        background-color: #ffffff;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(175, 225, 24, 0.2);
+      }
+
+      // Активное состояние для TextArea
+      &:not(:placeholder-shown) {
+        background-color: #333333;
+        color: #ffffff;
+        
+        &::placeholder {
+          color: #aaaaaa;
+        }
+      }
+    }
+  }
+
+  &__field--textarea {
+    grid-column: 1 / -1;
+  }
+
+  &__submit {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    background: #1A1A1A1A;
+    color: #1A1A1A;
+    font-weight: bold;
+    border: 1px solid #1A1A1A80;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #BFFF1A 0%, #9AD000 100%);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__success {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #AFE118;
+    color: #000000;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    animation: slideUp 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Анимация для сообщения об успехе
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+// Адаптив для мобильных устройств
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 1rem;
+  }
+
+  .contact-form {
+    &__fieldset {
+      gap: 1.5rem;
+    }
+
+    &__input {
+      font-size: 0.9rem;
+      padding: 0.6rem 0.8rem;
+    }
+
+    &__label {
+      font-size: 0.9rem;
+    }
+
+    &__submit {
+      font-size: 1rem;
+      padding: 1.2rem;
+    }
+  }
+}
+
+// Планшеты
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    &__fieldset {
+      gap: 1.8rem;
+    }
+  }
+}
+
+// Дополнительные стили для валидации
+[data-slot="field"].invalid {
+  .contact-form__input,
+  .contact-form__textarea-input {
+    border-color: #ff4444;
+    
+    &:focus {
+      border-color: #ff4444;
+      box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.2);
+    }
+  }
+}
+
+// Стили для описаний
+[data-slot="description"] {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  margin-top: 0.25rem;
+}

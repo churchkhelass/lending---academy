@@ -5,16 +5,16 @@ import './HeaderSlogan.scss';
 const HeaderSlogan = (): React.ReactElement => {
    return (
       <div style={{
-         position: 'absolute',
-         top: '57vh',
-         left: '50%',
-         transform: 'translate(-50%, -50%)',
+         // position: 'absolute',
+         // top: '57vh',
+         // left: '50%',
+         // transform: 'translate(-50%, -50%)',
          display: 'flex',
          flexDirection: 'row',
          justifyContent: 'space-between',
          alignItems: 'center',
          gap: '2rem',
-         width: '80%',
+         
          zIndex: 5,
       }} className="header-slogan-container">
          <div className="header-slogan">

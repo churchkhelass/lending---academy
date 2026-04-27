@@ -25,10 +25,7 @@ const Layout = ({ children }: LayoutProps): React.ReactElement => {
       <main className="layout__main">
         {children}
       </main>
-      <FooterGradient />
-
-      {/* <div className='black'></div> */}
-      
+      <FooterGradient />      
       <Footer />
     </div>
   );

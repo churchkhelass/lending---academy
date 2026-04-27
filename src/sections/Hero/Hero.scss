@@ -1,8 +1,5 @@
 .hero__subtitle{
-   font-size: 1.2rem;
-   line-height: 1.6;
-   color: #333;
-   width: 50%;
+   width: 80%;
 }
 .hero__content{
    display: flex;
@@ -10,4 +7,12 @@
    align-items: center;
    justify-content: center;
    height: 18vh;
+}
+@media (min-width: 768px) {
+.hero__subtitle{
+   font-size: 1.2rem;
+   line-height: 1.6;
+   color: #333;
+   width: 50%;
+}
 }
