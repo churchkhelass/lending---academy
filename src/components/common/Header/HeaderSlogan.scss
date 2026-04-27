@@ -1,0 +1,41 @@
+.footer__button {
+   text-transform: uppercase;
+   font-size: 1.5rem;
+   padding: 2rem 2rem;
+   border-radius: 8px;
+   backdrop-filter: blur(10px); // Added backdrop blur
+}
+
+.header-slogan-container {
+   position: 'absolute';
+   top: '50%';
+   left: '50%';
+   transform: 'translate(-50%, -50%)';
+}
+
+.positive {
+   background-color: #FAFAFA;
+   color: #000000;
+}
+
+.negative {
+   background-color: #FAFAFA1A;
+   color: #FAFAFA;
+}
+
+/// New styles for the slogan spans
+.header-slogan {
+   font-size: 1.4rem;
+   text-align: center;
+   color: white;
+   text-transform: uppercase;
+   span {
+      color: #AFE118; // White color for the rest of the text in spans
+      font-size: 2rem;
+
+      &::first-letter {
+         color: #AFE118; // Green color for the first letter
+         text-transform: uppercase; // Ensure the first letter is uppercase
+      }
+   }
+}

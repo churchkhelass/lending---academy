@@ -48,7 +48,9 @@ const HeaderGradient = () => {
          animationDuration={8}
          className="footer-gradient"
          style={{rotate: '180deg'}}
+         
       >
+         
          <div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -60,16 +62,18 @@ const HeaderGradient = () => {
             fontFamily: 'system-ui, -apple-system, sans-serif',
             position: 'relative',
             zIndex: 2,
-            rotate: '180deg'
+            rotate: '180deg',
+            paddingBottom: '10px',
+            textTransform: 'uppercase',
          }}>
             <p style={{
-               fontSize: '20vw',
+               fontSize: '17vw',
+               lineHeight: '0.8',
                margin: 0,
                opacity: 0.5,
             }}>
                а-я agency
             </p>
-
          </div>
       </WaveGradient>
    )

@@ -11,9 +11,14 @@ interface HeroProps {
 }
 
 const Hero = ({ 
-  title = 'Добро пожаловать',
-  subtitle = 'Создайте удивительный проект с нами',
-  ctaText = 'Начать',
+  // title = 'Добро пожаловать',
+  subtitle = `Мы — ваша внешняя продукт-команда. Погружаемся в ваш 
+  бизнес, анализируем аудиторию и рынок, проектируем решение,
+  которое конвертирует, и воплощаем его в коде. Наш результат — 
+  не просто «сданный проект», а работающий digital-инструмент,
+  который приносит заявки и клиентов. Мы отвечаем за процесс от
+  первой встречи до запуска и первых результатов.`,
+  // ctaText = 'Начать',
   onCtaClick 
 }: HeroProps): React.ReactElement => {
   const handleClick = (): void => {
@@ -29,11 +34,11 @@ const Hero = ({
     <section id="home" className="hero">
       <Container>
         <div className="hero__content">
-          <h1 className="hero__title">{title}</h1>
+          {/* <h1 className="hero__title">{title}</h1> */}
           <p className="hero__subtitle">{subtitle}</p>
-          <button onClick={handleClick} className="hero__cta">
+          {/* <button onClick={handleClick} className="hero__cta">
             {ctaText}
-          </button>
+          </button> */}
         </div>
       </Container>
     </section>

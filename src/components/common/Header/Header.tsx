@@ -10,6 +10,7 @@ export interface NavLink {
   href: string;
   label: string;
 }
+
 const Header = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isScrolled: boolean = useScroll(50);
@@ -17,12 +18,10 @@ const Header = (): React.ReactElement => {
   const toggleMenu = (): void => setIsOpen(!isOpen);
   const closeMenu = (): void => setIsOpen(false);
 
-
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <Container className="header__container">
         <a href="#home" className="header__logo">
-          {/* <span className="header__logo-text">Logo</span> */}
           <img src={logoHeader} alt="Logo" className="header__logo-text" />
         </a>
 
@@ -45,7 +44,7 @@ const Header = (): React.ReactElement => {
           aria-expanded={isOpen}
         >
           <span className="header__burger-line"></span>
-          {/* <span className="header__burger-line"></span> */}
+          <span className="header__burger-line"></span>
           <span className="header__burger-line"></span>
         </button>
 

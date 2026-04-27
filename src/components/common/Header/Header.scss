@@ -10,7 +10,7 @@
   background-color: transparent;
   
   &--scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: '#1a1a1a';
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
   }
@@ -55,10 +55,55 @@
     color: var(--color-text);
     font-weight: 500;
     transition: color var(--transition-fast);
+    position: relative;
+    display: inline-block;
+    
+    &::before,
+    &::after {
+      content: '[';
+      position: absolute;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      transform: translateY(0);
+    }
+    
+    &::before {
+      left: -8px;
+      transform: translateY(0);
+    }
+    
+    &::after {
+      content: ']';
+      right: -8px;
+      transform: translateY(0);
+    }
     
     &:hover {
-      color: var(--color-primary);
+      color: #AFE118;
+      
+      &::before {
+        opacity: 1;
+        transform: translateY(-8px);
+      }
+      
+      &::after {
+        opacity: 1;
+        transform: translateY(8px);
+      }
     }
+  }
+  
+  // При скролле меняем цвет ссылок на белый
+  &--scrolled &__nav-link {
+    color: #ffffff;
+    
+    &:hover {
+      color: #AFE118;
+    }
+  }
+  
+  &--scrolled &__burger-line {
+    background-color: #ffffff;
   }
   
   &__burger {
@@ -136,9 +181,24 @@
     font-weight: 500;
     color: var(--color-text);
     transition: color var(--transition-fast);
+    position: relative;
+    display: inline-block;
     
     &:hover {
-      color: var(--color-primary);
+      color: #AFE118;
     }
   }
+}
+
+// Стили для белого логотипа при скролле (если нужно)
+.header--scrolled {
+  .header__logo-text {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.header__nav-link{
+  padding: 0 1rem 0 1rem;
+  font-size: 1.2rem;
+  color: white
 }
