@@ -12,7 +12,7 @@ const StartProject = () => {
 
             <Button style={{
                borderRadius: '8px',
-               fontSize: '5.5vw',
+               fontSize: '2rem',
                padding: '4.5vh 6vw',
                background: "black",
             }}>

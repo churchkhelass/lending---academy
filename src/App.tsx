@@ -18,7 +18,6 @@ function App(): React.ReactElement {
     <Layout>
       <Hero />
       <Container>
-        <div>123</div>
         <Director />
         <Accardion />
         <CaseGradient />

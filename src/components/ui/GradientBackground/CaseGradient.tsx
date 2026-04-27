@@ -61,7 +61,7 @@ const CaseGradient = () => {
             zIndex: 2,
          }}>
             <p style={{
-               fontSize: '19vw',
+               fontSize: '18vw',
                margin: 0,
                opacity: 0.5,
                

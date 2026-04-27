@@ -111,7 +111,7 @@ export const WaveGradient: React.FC<WaveGradientProps> = ({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let startTime: number | null = null;
+    // let startTime: number | null = null;
 
     const resizeObserver = new ResizeObserver(() => {
       if (container) {
@@ -256,20 +256,20 @@ export const WaveGradient: React.FC<WaveGradientProps> = ({
       ctx.globalAlpha = 1.0;
     };
 
-    const animate = (timestamp: number) => {
-      if (startTime === null) {
-        startTime = timestamp;
-      }
+    // const animate = (timestamp: number) => {
+    //   if (startTime === null) {
+    //     startTime = timestamp;
+    //   }
 
-      const elapsed = timestamp - startTime;
-      // Нормализуем время для анимации (полный цикл за animationDuration секунд)
-      const time = (elapsed / 1000) * (Math.PI * 2 / animationDuration);
-      timeRef.current = time;
+    //   const elapsed = timestamp - startTime;
+    //   // Нормализуем время для анимации (полный цикл за animationDuration секунд)
+    //   const time = (elapsed / 1000) * (Math.PI * 2 / animationDuration);
+    //   timeRef.current = time;
 
-      drawWaves(time);
+    //   drawWaves(time);
 
-      animationRef.current = requestAnimationFrame(animate);
-    };
+    //   animationRef.current = requestAnimationFrame(animate);
+    // };
 
     // Начальная отрисовка
     const rect = container.getBoundingClientRect();
@@ -278,7 +278,7 @@ export const WaveGradient: React.FC<WaveGradientProps> = ({
     drawWaves(0);
 
     // Запуск анимации
-    animationRef.current = requestAnimationFrame(animate);
+    // animationRef.current = requestAnimationFrame(animate);
 
     return () => {
       if (animationRef.current) {

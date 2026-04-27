@@ -47,10 +47,10 @@ const ContactForm = (): React.ReactElement => {
             //   label: "contact-form__label",
             // }}
           >
-            <Label style={{textAlign: 'start', fontSize: '5.5vw'}}>Имя</Label>
+            <Label style={{textAlign: 'start', fontSize: '2rem'}}>Имя</Label>
             <Input
               placeholder="Как к вам обращаться?"
-              style={{textAlign: 'start', fontSize: '5.5vw'}}
+              style={{fontSize: '2rem'}}
               // size="lg"
             />
             {/* <Description>Введите ваше полное имя</Description> */}
@@ -67,10 +67,10 @@ const ContactForm = (): React.ReactElement => {
             //   label: "contact-form__label",
             // }}
           >
-            <Label style={{textAlign: 'start', fontSize: '5.5vw'}}>Телефон</Label>
+            <Label style={{textAlign: 'start', fontSize: '2rem'}}>Телефон</Label>
             <Input
               placeholder="+7 (999) 999-99-99"
-              style={{textAlign: 'start', fontSize: '5.5vw'}}
+              style={{fontSize: '2rem'}}
               type="tel"
             />
             {/* <Description>Для оперативной связи</Description> */}
@@ -87,10 +87,10 @@ const ContactForm = (): React.ReactElement => {
             //   label: "contact-form__label",
             // }}
           >
-            <Label style={{textAlign: 'start', fontSize: '5.5vw'}}>Telegram</Label>
+            <Label style={{textAlign: 'start', fontSize: '2rem'}}>Telegram</Label>
             <Input
               placeholder="@username"
-              style={{textAlign: 'start', fontSize: '5.5vw'}}
+              style={{textAlign: 'start', fontSize: '2rem'}}
             />
             {/* <Description>Ваш никнейм в Telegram</Description> */}
             <FieldError />
@@ -106,10 +106,10 @@ const ContactForm = (): React.ReactElement => {
             //   label: "contact-form__label",
             // }}
           >
-            <Label style={{textAlign: 'start', fontSize: '5.5vw'}}>Расскажите о вашем проекте</Label>
+            <Label style={{textAlign: 'start', fontSize: '2rem'}}>Расскажите о вашем проекте</Label>
             <TextArea
               placeholder="Описание..."
-              style={{textAlign: 'start', fontSize: '5.5vw'}}
+              style={{textAlign: 'start', fontSize: '2rem'}}
               // minRows={4}
               // maxRows={10}
               // classNames={{
